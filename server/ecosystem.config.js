@@ -1,7 +1,7 @@
 module.exports = {
   apps: [
     {
-      name: 'etl-backend',
+      name: 'auth-server',
       script: './index.js',
       instances: 'max',
       env: {
