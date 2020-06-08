@@ -7,6 +7,7 @@ const methodOverride = require('method-override')
 const morgan = require('morgan')
 const responseTime = require('response-time')
 const logger = require('../util/logger')
+const db = require('./db')
 
 const isProduction = process.env.NODE_ENV === 'production'
 const allowedOrigins = [
@@ -95,6 +96,8 @@ module.exports = app => {
   if (!isProduction) {
     app.use(errorHandler({ log: errorNotification }))
   }
+
+  db()
 
   function errorNotification (err, str, req) {
     const title = `Error in ${req.method} ${req.url}`
