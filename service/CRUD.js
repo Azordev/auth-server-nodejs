@@ -1,6 +1,6 @@
 const mongoDB = require('./mongoDB')
 
 module.exports = {
-  ...mongoDB,
+  mongoDB,
   driver: 'mongo'
 }

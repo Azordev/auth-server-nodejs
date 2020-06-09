@@ -35,7 +35,11 @@ var User = new Schema(
       type: String,
       default: 'PE'
     },
-    address: String
+    address: String,
+    blocked: {
+      type: Boolean,
+      default: false
+    }
   },
   {
     timestamps: true
