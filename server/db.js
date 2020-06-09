@@ -7,8 +7,8 @@ const db = async () => {
   if (CRUD.driver === 'mongo') {
     logger.info('Initializing MongoDB')
     await mongoose.connect(
-      CRUD.dbURL,
-      CRUD.options
+      CRUD.mongoDB.dbURL,
+      CRUD.mongoDB.options
     )
       .then(_ => logger.info('Mongoose is connected!'))
       .catch(logger.error.bind(logger, 'connection error:'))

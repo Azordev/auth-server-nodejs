@@ -87,6 +87,6 @@ module.exports = app => {
       (typeof addr === 'string' ? `pipe ${addr}` : `port ${addr.port}`) +
       ` ${type}`
     logger.info(bind)
-    logger.info('App listening on http://127.0.0.1:8080/api')
+    logger.info('App listening on http://localhost:8080/ping')
   }
 }
