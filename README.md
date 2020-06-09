@@ -24,21 +24,26 @@
     🐞
     <a href="https://github.com/Israel-Laguan/<express-production-template/issues">Report a Bug</a>
     🙋‍♂️
-    <a href="https://github.com/Israel-Laguan/express-production-template/issues">Request Feature</a>
+    <a href="https://github.com/Azordev/auth-server-nodejs/issues">Request Feature</a>
   </p>
 </p>
 
+Live at [azordev-auth.herokuapp.com](https://azordev-auth.herokuapp.com/)
+
 ## Table of Contents
 
-1. [Author](#author)
-2. [Contributing](#contributing)
-3. [Show your support](#show-your-support)
-4. [License](#license)
+1. [Features](#features)
+2. [Getting Started](#getting-started)
+3. [Code Overview](#code-overview)
+4. [Author](#author)
+5. [Contributing](#contributing)
+6. [Show your support](#show-your-support)
+7. [License](#license)
 
-[![JavaScript Style Guide](https://cdn.rawgit.com/standard/standard/master/badge.svg)](https://github.com/standard/standard)
 
 # Features
 
+[![JavaScript Style Guide](https://cdn.rawgit.com/standard/standard/master/badge.svg)](https://github.com/standard/standard)
 
 [![Framework][badge-framework]][framework-url]
 ![javascript][]
@@ -142,21 +147,21 @@ Icons from:
 
 # License
 
-[![License][badge-license]](http://badges.mit-license.org)
+[![License][badge-apache]][apache-license]
 
-📝 This project is licensed under the [MIT](LICENSE)\
+📝 This project is licensed under the [Apache 2](LICENSE)\
 Feel free to fork this project and improve it
 
 <!-- MARKDOWN LINKS & IMAGES -->
-[contributors-shield]: https://img.shields.io/github/contributors/Israel-Laguan/express-production-template?style=for-the-badge
-[contributors-url]: https://github.com/Israel-Laguan/express-production-template/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/Israel-Laguan/express-production-template?style=for-the-badge
-[forks-url]: https://github.com/Israel-Laguan/express-production-template/network/members
-[stars-shield]: https://img.shields.io/github/stars/Israel-Laguan/express-production-template?style=for-the-badge
-[stars-url]: https://github.com/Israel-Laguan/express-production-template/stargazers
-[issues-open-shield]: https://img.shields.io/github/issues/Israel-Laguan/express-production-template?style=for-the-badge
-[issues-url]: https://github.com/Israel-Laguan/express-production-template/issues
-[issues-closed-shield]: https://img.shields.io/github/issues-closed/Israel-Laguan/express-production-template?style=for-the-badge
+[contributors-shield]: https://img.shields.io/github/contributors/Azordev/auth-server-nodejs?style=for-the-badge
+[contributors-url]: https://github.com/Azordev/auth-server-nodejs/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/Azordev/auth-server-nodejs?style=for-the-badge
+[forks-url]: https://github.com/Azordev/auth-server-nodejs/network/members
+[stars-shield]: https://img.shields.io/github/stars/Azordev/auth-server-nodejs?style=for-the-badge
+[stars-url]: https://github.com/Azordev/auth-server-nodejs/stargazers
+[issues-open-shield]: https://img.shields.io/github/issues/Azordev/auth-server-nodejs?style=for-the-badge
+[issues-url]: https://github.com/Azordev/auth-server-nodejs/issues
+[issues-closed-shield]: https://img.shields.io/github/issues-closed/Azordev/auth-server-nodejs?style=for-the-badge
 [badge-framework]: https://img.shields.io/badge/express.js-v4.x-9cf?style=for-the-badge
 [framework-url]: https://expressjs.com/
 [contributions-welcome]: https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=for-the-badge
@@ -165,3 +170,5 @@ Feel free to fork this project and improve it
 [nodejs]: https://img.shields.io/badge/node.js-V14.x-339933?style=for-the-badge&logo=node.js
 [heroku]: https://img.shields.io/badge/Hosting-heroku-430098?style=for-the-badge&logo=heroku
 [mongodb]: https://img.shields.io/badge/database-mongodb-47A248?style=for-the-badge&logo=mongodb
+[badge-apache]: https://img.shields.io/badge/License-Apache%202.0-blue.svg?style=for-the-badge
+[apache-license]: https://opensource.org/licenses/Apache-2.0

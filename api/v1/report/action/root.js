@@ -2,7 +2,7 @@ const root = async (req, res) => {
   const info = [ // TODO: make a function that takes swajjer json and generate this
     {
       path: '/api/v1/report',
-      url: 'https://etl-auth.herokuapp.com/api/v1/report',
+      url: 'https://azordev-auth.herokuapp.com/api/v1/report',
       description: 'Get info about Endpoint. Return info',
       methods: {
         get: {
@@ -17,7 +17,7 @@ const root = async (req, res) => {
     },
     {
       path: '/api/v1/report/{reportId}',
-      url: 'https://etl-auth.herokuapp.com/api/v1/report/{reportId}',
+      url: 'https://azordev-auth.herokuapp.com/api/v1/report/{reportId}',
       description: 'operations in User from specific id. Need to have a valid token.',
       methods: {
         get: {
@@ -37,7 +37,7 @@ const root = async (req, res) => {
     },
     {
       path: '/api/v1/reports',
-      url: 'https://etl-auth.herokuapp.com/api/v1/reports',
+      url: 'https://azordev-auth.herokuapp.com/api/v1/reports',
       description: 'Operations made with all the reports',
       methods: {
         get: {
