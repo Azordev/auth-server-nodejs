@@ -1,20 +1,17 @@
-const queries = require('../util/queries')
-const fetchql = require('../service/fetchql')
+const services = require('../../../services')
+
+const { deleteReport, logger } = services
 
 const deleteReportId = async (req, res) => {
-  const { reportId } = req.params
   try {
-    const report = await fetchql(
-      queries.deleteReport[0],
-      queries.deleteReport[1],
-      { report_id: reportId }
-    )
-    if (report[queries.deleteReport[0]]) {
-      console.log(report)
+    const { reportId } = req.params
+    const { ok, data } = await deleteReport(reportId)
+    if (ok) {
+      logger.info(data)
       return res.status(204).json({
         ok: true,
         msg: `report with id ${reportId} deleted successfully`,
-        data: [report]
+        data
       })
     }
 
@@ -26,7 +23,7 @@ const deleteReportId = async (req, res) => {
       }]
     })
   } catch (error) {
-    console.log(error)
+    logger.error(error)
     return res.status(500).json({
       ok: false,
       msg: 'something went wrong, Please try again',

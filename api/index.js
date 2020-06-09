@@ -6,6 +6,7 @@
 // })
 
 // const versionController = require('./version');
+const service = require('./services')
 const system = require('./system')
 
 module.exports = (server) => {
@@ -18,6 +19,6 @@ module.exports = (server) => {
     // server.use('/api', versionController);
     // server.use('/api',limiter);
   } catch (error) {
-    console.error(error)
+    service.logger.error(error)
   }
 }

@@ -1,5 +1,6 @@
-const queries = require('../util/queries')
-const fetchql = require('../service/fetchql')
+const services = require('../../../services')
+
+const { updateReport, logger } = services
 
 const putReport = async (req, res) => {
   try {
@@ -16,8 +17,7 @@ const putReport = async (req, res) => {
       })
     }
 
-    const updated = await fetchql(queries.putReport[0], queries.putReport[1], {
-      report_id: reportId,
+    const { ok, data } = await updateReport({
       company,
       client,
       items,
@@ -25,25 +25,18 @@ const putReport = async (req, res) => {
       status
     })
 
-    console.log(updated)
-    if (updated[queries.putReport[0]]) {
+    logger.info(data)
+    if (ok) {
       return res.status(200).json({
         ok: true,
         msg: 'El report se actualizo sin problemas!',
-        data: {
-          report_id: reportId,
-          company,
-          client,
-          items,
-          total,
-          status
-        }
+        data
       })
     } else {
       throw new Error('Hubo un problema con la Base de Datos!')
     }
   } catch (error) {
-    console.log(error)
+    logger.log(error)
     return res.status(500).json({
       ok: false,
       msg: 'something went wrong with code, Please try again',

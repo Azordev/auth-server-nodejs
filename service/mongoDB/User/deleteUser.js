@@ -4,14 +4,13 @@ const logger = require('../../../util/logger')
 module.exports = async (email = '') => {
   try {
     const updatedUser = await userModel
-      .findOneAndUpdate({ email }, { blocked: false })
+      .findOneAndUpdate({ email }, { blocked: false }, {
+        new: true,
+        omitUndefined: true
+      })
       .select('-password')
       .lean()
       .exec(
-        {
-          new: true,
-          omitUndefined: true
-        },
         (err, user) => {
           if (err) {
             logger.warn(err)

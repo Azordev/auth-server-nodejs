@@ -8,5 +8,9 @@ module.exports = {
   createUser: CRUD.mongoDB.user.createUser,
   deleteUser: CRUD.mongoDB.user.deleteUser,
   findUser: CRUD.mongoDB.user.findUser,
-  updateUser: CRUD.mongoDB.user.updateUser
+  updateUser: CRUD.mongoDB.user.updateUser,
+  createReport: CRUD.mongoDB.report.createReport,
+  deleteReport: CRUD.mongoDB.report.deleteReport,
+  findReports: CRUD.mongoDB.report.findReports,
+  updateReport: CRUD.mongoDB.report.updateReport
 }

@@ -1,5 +1,6 @@
-const queries = require('../util/queries')
-const fetchql = require('../service/fetchql')
+const services = require('../../../services')
+
+const { createReport, logger } = services
 
 const postReport = async (req, res) => {
   try {
@@ -17,28 +18,24 @@ const postReport = async (req, res) => {
       })
     }
 
-    const newReport = await fetchql(
-      queries.postReport[0],
-      queries.postReport[1],
-      {
-        company,
-        client,
-        items,
-        total,
-        status
-      }
-    )
-    if (newReport[queries.postReport[0]]) {
+    const { ok, data } = await createReport({
+      company,
+      client,
+      items,
+      total,
+      status
+    })
+    if (ok) {
       return res.status(201).json({
         ok: true,
         msg: 'report created successfully',
-        data: newReport
+        data
       })
     } else {
       throw new Error('El reporte no pudo crearse')
     }
   } catch (error) {
-    console.error(error)
+    logger.error(error)
     return res.status(500).json({
       ok: false,
       msg: 'something went wrong, Please try again',
