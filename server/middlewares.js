@@ -10,10 +10,7 @@ const logger = require('../util/logger')
 const db = require('./db')
 
 const isProduction = process.env.NODE_ENV === 'production'
-const allowedOrigins = [
-  'http://localhost:8080',
-  'http://localhost:8081'
-]
+const allowedOrigins = ['http://localhost:8080', 'http://localhost:8081']
 
 const productionURL = process.env.PRODUCTION_URL
 if (productionURL) allowedOrigins.push(productionURL)
@@ -24,13 +21,19 @@ const originUndefined = (req, _, next) => {
       'Hi, you are visiting the service locally? If this was a CORS the origin header should not be undefined'
     )
   }
-  if (req.headers.host === 'localhost:8080' || req.headers.host === 'localhost:8081') {
+  if (
+    req.headers.host === 'localhost:8080' ||
+    req.headers.host === 'localhost:8081'
+  ) {
     req.headers.origin = 'http://' + req.headers.host
+  }
+  if (req.headers.host === 'azordev-auth.herokuapp.com') {
+    req.headers.origin = 'https://' + req.headers.host
   }
   next()
 }
 
-module.exports = app => {
+module.exports = (app) => {
   // Enable if you're behind a reverse proxy (Heroku in our case)
   // see https://expressjs.com/en/guide/behind-proxies.html
   app.set('trust proxy', 1)
