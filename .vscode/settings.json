@@ -15,5 +15,10 @@
     "standard.validate": [
       "javascript",
       "javascriptreact"
-    ]
+    ],
+    "editor.tabSize": 2,
+    "editor.cursorBlinking": "smooth",
+    "editor.minimap.enabled": false,
+    "telemetry.enableTelemetry": false,
+    "telemetry.enableCrashReporter": false,
   }
