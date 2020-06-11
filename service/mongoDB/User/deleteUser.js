@@ -4,7 +4,7 @@ const logger = require('../../../util/logger')
 module.exports = async (email = '') => {
   try {
     const updatedUser = await userModel
-      .findOneAndUpdate({ email }, { blocked: false }, {
+      .findOneAndUpdate({ email }, { blocked: true }, {
         new: true,
         omitUndefined: true
       })

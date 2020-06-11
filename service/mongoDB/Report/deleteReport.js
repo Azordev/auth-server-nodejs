@@ -7,7 +7,7 @@ module.exports = async reportID => {
       .findByIdAndUpdate({
         _id: reportID
       }, {
-        hidden: false
+        hidden: true
       },
       (err, result) => {
         if (err) {
