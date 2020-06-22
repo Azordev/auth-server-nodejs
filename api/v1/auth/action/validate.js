@@ -17,7 +17,7 @@ const validateUser = async (_, res) => {
           exp: decoded.exp,
           role: decoded.role,
           email: decoded.email,
-          msg: 'Please renew your token!'
+          msg: 'Please renew your session! Session expired, please login again!'
         }
       })
     }
