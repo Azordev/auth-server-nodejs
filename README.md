@@ -14,7 +14,7 @@
   </a>
 
   <h1 align="center">
-	Azordev SSO Server
+	SSO Server
   </h1>
 
   <p align="center">
@@ -39,7 +39,6 @@ Live at [azordev-auth.herokuapp.com](https://azordev-auth.herokuapp.com/)
 5. [Contributing](#contributing)
 6. [Show your support](#show-your-support)
 7. [License](#license)
-
 
 # Features
 
